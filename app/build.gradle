@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion '30.0.0'
+
+    defaultConfig {
+        applicationId "homework.chegg.com.chegghomework"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/proguard/coroutines.pro'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    // AppCompat
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+
+    // CardView
+    implementation "androidx.cardview:cardview:$card_view_version"
+
+    // RecyclerView
+    implementation "androidx.recyclerview:recyclerview:$recycler_view_version"
+
+    // Lifecycle
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+
+    // Kotlin Libraries
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // AndroidNetworking
+    implementation "com.amitshekhar.android:android-networking:$android_networking_version"
+
+    // Universal Image Loader
+    implementation "com.nostra13.universalimageloader:universal-image-loader:$universal_image_loader_version"
+
+    // Room Database
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+}
