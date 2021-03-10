@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CheggHomework</string>
+    <string name="refresh_data">Go Go Go</string>
+    <string name="chegghomeassignment_main_activity_progress_bar_text">Please wait…</string>
+    <string name="chegghomeassignment_dialog_request_failed_title">Request failed</string>
+    <string name="chegghomeassignment_dialog_request_failed_message">Your recent request has failed. Please try again.</string>
+    <string name="chegghomeassignment_dialog_request_failed_positive_button_text">OK</string>
+</resources>
